@@ -1,0 +1,33 @@
+.navbar-brand img {
+  width: 60px;
+  height: 52px;
+}
+
+.navbar {
+  background-color: black !important;
+  color: white !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar .navbar-nav {
+  font-size: 14px;
+}
+
+.navbar .dropdown-menu li a {
+  color: black !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url(~src/assets/nav/menu-nav.svg) !important;
+}
+
+.navbar ul li a {
+  transition: all .4s ease-in-out;
+  opacity: 0.75;
+  color: #fff !important;
+}
+
+.navbar ul li a:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+}

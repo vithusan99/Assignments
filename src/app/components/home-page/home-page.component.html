@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row  home_full">
+        <div class="col-md-6 left_content h-100">
+            <div class="filter_head d-flex my-2 align-items-center justify-content-between ">
+                <select class="form-select p-3 rounded-0 form-select mb-3" aria-label=".form-select-lg example">
+                    <option selected>Newest</option>
+                    <option value="1">Highet Price</option>
+                    <option value="2">Lowest Price</option>
+                    <option value="3">Largest ft&#178;</option>
+                    <option value="3">Smallest ft&#178;</option>
+                    <option value="2">Newest</option>
+                    <option value="2">Oldest</option>
+                </select>
+                <div class="reults">1000 Results</div>
+            </div>
+
+            <div class="landmark_card_list container-fluid">
+                <div class="d-flex align-items-start justify-content-center flex-wrap">
+                    <div *ngFor="let land of [1,2,3,4,5,56,6,7,7]" class="land_card p-1 my-2">
+                        <div class="card shadow-sm rounded-0 w-100">
+                            <div class="card_cover">
+                                <img src="https://api-prod.corelogic.com/trestle/Media/REBNY/Property/PHOTO-jpeg/1033873687/1/MzM2Ny8yMTY3LzIw/MjAvMTAyNjUvMTY3Nzc3ODgzOA/vE0qb_AE5MJUPHyOsfbzxtERNHehAHV_sJq20Wyvgl0"
+                                    class="card-img-top" alt="land-img">
+                                <div class="favourite">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="black" stroke="#fff" stroke-width="1" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-heart m-2 ">
+                                        <path class="shadow-sm "
+                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card-body pb-1">
+                                <div class="card-title m-0 d-flex align-items-center justify-content-between  ">
+                                    <h4 class="listing_head m-0 fw-bold">$2,300,000</h4>
+                                    <div class="listing_card_attr d-flex align-items-center ">
+                                        <span class="feature ">
+                                            2 Beds
+                                        </span>
+                                        <span style="color: #dddddd;" class="px-1">|</span>
+                                        <span class="feature ">
+                                            2 Baths
+                                        </span>
+                                        <span style="color: #dddddd;" class="px-1">|</span>
+                                        <span class="feature ">
+                                            2.33 ft&#178;
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="card-text address fw-normal m-0">1150 PARK Avenue Unit: 11D, New York City, NY
+                                    10128</p>
+                                <div class="card_base d-flex align-items-start justify-content-between">
+                                    <div class="status_mark rounded-circle "></div>
+                                    <div class="label d-inline-block fw-normal m-0  ">
+                                        Active
+                                    </div>
+                                    <span class="mx-1" style="color: #dddddd">|</span>
+                                    <div class="mis_key m-0">
+                                        MLS®: RPLU-5122304572
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="top: 60px;right: 0;" class="col-md-6 d-none d-md-block right_content position-fixed p-0">
+            <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+                <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng" [title]="marker.title"></agm-marker>
+            </agm-map>
+        </div>
+    </div>
+</div>
